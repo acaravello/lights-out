@@ -36,8 +36,6 @@ class Board extends Component {
       board.push(arrayColumns);
     }
     
-    console.log("Board is");
-    console.log(board);
     return board;
   }
 
