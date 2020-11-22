@@ -39,7 +39,9 @@ table tr:last-child td:last-child {
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
+  flex-wrap: wrap;
 }
+
 
 .neon-orange {
   font-family: neon;
@@ -63,6 +65,14 @@ table tr:last-child td:last-child {
   -o-animation: neon-blue 2s linear infinite;
 }
 
+@media(max-width: 499px) {
+  .neon-blue, .neon-orange, .Winner .neon-orange, .Winner .neon-blue {
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+
+
 @keyframes neon-orange {
   0%,
   100% {
@@ -85,4 +95,9 @@ table tr:last-child td:last-child {
     text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
     color: #146C80;
   }
+}
+
+
+.BoardContainer {
+ margin: auto;
 }

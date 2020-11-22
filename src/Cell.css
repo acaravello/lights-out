@@ -9,3 +9,10 @@
 .Cell-lit {
   background-color: #00bcd4;
 }
+
+@media(max-width: 499px) {
+  .Cell {
+    width: 60px;
+    height: 60px;
+  }
+}

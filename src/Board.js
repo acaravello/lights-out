@@ -95,17 +95,20 @@ class Board extends Component {
         <div className="neon-blue">Out</div>
       </div>
         
-    <table className="Board">
-    <tbody>
-    {this.state.board.map( (row, index) => {
-      return <tr key={index} id={index} value={row}>{row.map((value,secondIndex) => {
-        return <Cell isLit={value} key={`${index}-${secondIndex}`} id={`${index}-${secondIndex}`} 
-        flipCellsAroundMe = {this.flipCellsAround.bind(this,`${index}-${secondIndex}`)}
-        />
-      })}</tr>
-    })}
-    </tbody>
-    </table>
+        <div className="BoardContainer">
+          <table className="Board">
+            <tbody>
+              {this.state.board.map((row, index) => {
+                return <tr key={index} id={index} value={row}>{row.map((value, secondIndex) => {
+                  return <Cell isLit={value} key={`${index}-${secondIndex}`} id={`${index}-${secondIndex}`}
+                    flipCellsAroundMe={this.flipCellsAround.bind(this, `${index}-${secondIndex}`)}
+                  />
+                })}</tr>
+              })}
+            </tbody>
+          </table>
+        </div>
+   
     </div>
     
     if(this.state.hasWon) {
